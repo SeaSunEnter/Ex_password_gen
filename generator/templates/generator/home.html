@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<div class="container text-center">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1894.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Helvetica}
+  </style>
+</head>
+<body>
+<h1>Password generator</h1>
+<form action="{% url 'password' %}">
+  <select name="length">
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12" selected="selected">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+  </select> Length
+  <br>
+  <input type="checkbox" name="uppercase"> Uppercase
+  <br>
+  <input type="checkbox" name="numbers"> Numbers
+  <br>
+  <input type="checkbox" name="special"> Special Characters
+  <br>
+
+  <input type="submit" value="Generate password..." class="btn btn-primary">
+</form>
+<br>
+<a href="{% url 'about' %}">About</a>
+</div>
+</body>
+</html>
